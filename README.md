@@ -7,21 +7,21 @@ Elasticsearch backend for statsd
 
 This backend allows [Statsd][statsd] to save to [Elasticsearch][elasticsearch].  Supports dynamic index creation per day and follows the logstash naming convention of statsd-YYYY.MM.DD for index creation.
 
-## History 
+## History
 
 Originally written by Github user rameshpy, this library was created as a feature branch of etsy/statsd.  The statsd project recommended that this library be converted to its own repository as all other backends currently do.  This repository started as a restructuring of the existing feature branch into a standalone backend repository.
 
 ## Installation
 
     $ cd /path/to/statsd
-    $ npm install git://github.com/markkimsal/statsd-elasticsearch-backend.git
-    
+    $ npm install git://github.com/adaptiv-io/statsd-elasticsearch-backend.git
+
 To install from behind a proxy server:
 
     $ export https_proxy=http://your.proxyserver.org:8080
     $ export http_proxy=http://your.proxyserver.org:8080
     $ cd /path/to/statsd
-    $ npm install git+https://github.com/markkimsal/statsd-elasticsearch-backend.git
+    $ npm install git+https://github.com/adaptiv-io/statsd-elasticsearch-backend.git
 
 
 ## Configuration
@@ -43,7 +43,7 @@ Add a structure to your configuration called "elasticsearch"
  }
 ```
 
-The field _path_ is equal to "/" if you directly connect to ES. 
+The field _path_ is equal to "/" if you directly connect to ES.
 But when ES is on behind the proxy (nginx,haproxy), for example http://domain.com/elastic-proxy/, then following settings required:
 ```
     port: 80,
